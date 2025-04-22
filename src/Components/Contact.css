@@ -1,0 +1,323 @@
+/* CONTACT CSS*/
+
+.contact-section {
+    display: flex;
+    justify-content:space-between;
+    background-color: #0A0A0A;
+    padding: 50px 200px;
+    color: #fff;
+    text-transform: uppercase;
+    gap: 80px;
+    margin-top: -10px;
+}
+
+/* FORM */
+
+.contact-form {
+    flex: 1;
+    padding: 20px;
+}
+
+.form-group {
+    display: flex;
+    margin-bottom: 30px;
+    gap: 5px;
+}
+
+label {
+    flex: 15%;
+}
+
+textarea {
+    background: none;
+    border: none;
+    border: 1px solid #fff;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 10px 0 0 0;
+    font: inherit;
+    color: inherit;
+    border-radius: 10px;
+    resize: vertical;
+    width: 97%;
+    padding: 8px;
+}
+
+input {
+    flex: 1;
+    flex: 85%;
+    background: none;
+    border: none;
+    border-bottom: 1px solid #fff;
+    outline: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+.form-group:nth-child(5) {
+    display: block;
+}
+
+.form-group:nth-child(6) {
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+}
+
+.button-container button {
+    padding: 15px;
+    font: inherit;
+    color: inherit;
+    background-color: #cc1c1c;
+    border: none;
+    border-radius: 10px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+
+    background-color: #fff;
+    color: #000;
+}
+
+h2 {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 3em;
+    font-family: 'Sayonara-Bold',sans-serif;
+    text-transform: uppercase;
+}
+
+.confirmation-form {
+    top: 50%;
+    text-align: center;
+    font-family: 'Sayonara-Bold', sans-serif;
+    font-size: 3em;
+    background-color: #cc1c1c;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* HORAIRE */
+
+.opening-hours {
+    flex: 1;
+    padding: 20px;
+}
+
+.hours-table {
+    width: 100%;
+    border-collapse: separate;
+    font-size: 1.2em;
+    border-spacing: 0 20px;
+}
+
+.hours-table tr {
+    text-align: center;
+}
+
+.closed {
+    background-color: #cc1c1c;
+    border-radius: 5px;
+}
+
+.row-left {
+    text-align: left;
+}
+
+.row-right {
+    text-align: right;
+}
+
+/* SOCIALS BUTTONS */
+
+.social-medias {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.social-button-contact {
+    padding: 0;
+    transition: scale 0.3s ease ;
+}
+
+.social-button-contact img {
+    width: 90px;
+    height: 90px;
+    cursor: pointer;
+}
+
+.social-button-contact:nth-child(2) {
+    margin-top: 10px;
+}
+
+.social-button-contact:nth-child(3) {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+}
+
+.social-button-contact:hover {
+    scale: 1.15;
+}
+
+/* ENLEVER AUTOMATISATION CHROME */
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+    -webkit-text-fill-color: white !important;
+    background-color: transparent !important;
+    -webkit-box-shadow: 0 0 0 1000px transparent inset;
+    box-shadow: 0 0 0 1000px transparent inset;
+    transition: background-color 5000s ease-in-out 0s;
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+
+    h2 {
+        font-size: 2em;
+    }
+
+    .contact-section {
+        padding: 50px 40px;
+    }
+
+    label {
+        font-size: 0.9em;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .button-container button {
+        font-size: 0.8em;
+    }
+
+    .hours-table {
+        font-size: 1em;
+        border-spacing: 0 25px;
+    }
+
+    .social-medias {
+        margin-top: 10px;
+    }
+
+    .social-button-contact img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-button-contact:nth-child(3) {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+/* RESPONSIVE TABLET */
+
+@media (min-width: 521px) and (max-width: 1023px) {
+    .contact-section {
+        padding: 100px 20px 0 20px;
+        flex-direction: column-reverse;
+    }
+    
+    .social-medias {
+        margin-top: 30px;
+    }
+
+    .contact-form {
+        margin-top: -130px;
+        margin-bottom: 40px;
+    }
+}
+
+/* RESPONSIVE PHONE */
+
+@media (max-width: 520px) {
+    .contact-section {
+        padding: 250px 5px 0 5px;
+        flex-direction: column-reverse;
+    }
+
+    h2 {
+        font-size: 2.5em;
+    }
+
+    .hours-table {
+        font-size: 1em;
+    }
+
+    .row-left, .row-right {
+        font-size: 0.9em;
+    }
+
+    .social-medias {
+        margin-top: 30px;
+    }
+
+    .social-button-contact img {
+        width: 70px;
+        height: 70px;
+        justify-content: center;
+    }    
+    .social-button-contact:nth-child(3) {
+        width: 70px;
+        height: 70px;
+    }
+
+    .contact-form {
+        margin-top: -110px;
+        margin-bottom: 40px;
+    }
+}
+
+@media (max-width: 520px) and (min-height: 700px) {
+    .contact-section {
+        padding: 20px 5px 0 5px;
+    }
+}
+
+/*RESPONSIVE GRAND ECRAN */
+
+@media (min-width: 2000px) {
+    .contact-section {
+        height: 95vh;
+    }
+
+    h2 {
+        font-size: 5em;
+    }
+
+    .hours-table {
+        font-size: 2em;
+    }
+
+    .social-button-contact img {
+        width: 160px;
+        height: 160px;
+    }
+
+    .form-group {
+        font-size: 2em;
+    }
+
+    .button-container button {
+        padding: 25px;
+        border-radius: 10px;
+        font-size: 1.7em;
+    }
+}

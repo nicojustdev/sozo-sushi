@@ -1,0 +1,124 @@
+/*MainImageParallax.css*/
+
+body {
+    overflow-x: hidden;
+}
+
+.parallax-image {
+    position: absolute;
+    left:0;
+    top: -250px;
+    width: 100%;
+    height: auto;
+    background-position: center;
+    background-size: cover;
+    pointer-events: none;
+}
+
+.image-sunset{
+    z-index: 1;
+    width: 105%;
+}
+
+.image-sun{
+    z-index: 2;
+}
+
+.image-mt-fuji{
+    z-index: 3;
+}
+
+.image-hills{
+    z-index: 4;
+}
+
+.image-village{
+    z-index: 5;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease, transform 2s ease;
+}
+
+.image-village.visible-bas {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.image-village-coteG{
+    z-index: 6;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 1s ease, transform 2s ease;
+}
+
+.image-village-coteG.visible-gauche {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.image-village-coteD{
+    z-index: 6;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 1s ease, transform 2s ease;
+}
+
+.image-village-coteD.visible-droite {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-height: 955px) {
+    .parallax-image {
+        top: -200px;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .parallax-image {
+        top: -150px;
+    }
+
+}
+
+/* RESPONSIVE GRAND ECRAN */
+
+@media (min-width: 2000px) {
+    .parallax-image {
+        top: -380px;
+    }
+}
+
+
+/* RESPONSIVE TABLET */
+
+@media (min-width: 521px) and (max-width: 1023px) {
+    .parallax-image  {
+        top: -50px;
+        width: 130%;
+        left:-15%;
+    }
+}
+
+/* RESPONSIVE TELEPHONE */
+
+@media (max-width: 560px) {
+    .parallax-image  {
+        top: -80px;
+        left:-27%;
+        width: 160%;
+    }
+    
+    #MainPage {
+        position: relative;
+        height: 120vh;
+    }
+}
+
+@media (max-width: 560px) and (min-height: 750px) {
+    #MainPage {
+        height: 130vh;
+    }
+  }

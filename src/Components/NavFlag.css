@@ -1,0 +1,118 @@
+/*NavFlag.css*/
+
+.nav-flag-container {
+    position :relative;
+}
+
+.toggle-button {
+    padding: 10px 10px;
+    background: rgba(0, 0, 0, 30%);
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    border-radius: 10px;
+    transition: opacity 0.5s ease ;
+    opacity: 0;
+    transition: opacity 2s ease;
+}
+
+.toggle-button.visible-fondu {
+    opacity: 1;
+}
+
+.toggle-button img {
+    width: auto;
+    height: auto;
+}
+
+.nav-flag {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 80px;
+    overflow: hidden;
+    background-color: rgba(204,28,28,70%);
+    max-height: 0;
+    transition: max-height 0.5s ease, opacity 0.4s ease;
+    z-index: 9;
+    border-radius: 15px;
+    opacity:0;
+}
+
+.nav-flag.open {
+    max-height: 350px;
+    z-index: 9;
+    opacity: 1;
+}
+
+.flag-body {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.nav-menu ul li {
+    margin: 15px 0;
+}
+
+.nav-menu ul li a img {
+    width: 70%;
+    height: 70%;
+    transition: transform 0.5s ease;
+    transform-origin: center;
+}
+
+.nav-menu ul li a img:hover {
+    transform: scale(1.2);
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .toggle-button {
+        padding: 8px;
+    }
+
+    .nav-flag {
+        width: 60px;
+    }
+    .toggle-button img {
+        width: 80%;
+        height: 80%;
+    }
+
+}
+
+/* RESPONSIVE ORDI GRAND */
+
+@media (min-width: 2000px) {
+    .toggle-button {
+        padding: 15px;
+        width: 110px;
+    }
+
+    .toggle-button img {
+        width: 105%;
+        height: 105%;
+    }
+
+    .nav-flag {
+        width: 110px;
+    }
+    
+    
+    .nav-flag.open {
+        max-height: 380px;
+    }
+}

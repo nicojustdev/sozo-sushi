@@ -1,0 +1,812 @@
+/* Bento.css */
+
+@font-face {
+    font-family: 'Sayonara-Bold';
+    src: url("./font/SayonaraBold.ttf") format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+
+.bento-container {
+    display: grid;
+    grid-template-columns: minmax(300px,1fr) minmax(300px,2fr) minmax(300px, 1.5fr);
+    justify-items: center;
+    gap: 40px;
+    padding: 20px;
+    background: linear-gradient(180deg, #010719 0.2%, #0A0A0A 16.23%);
+    height: 100vh;
+    padding: 0 150px;
+    margin-top: -100px;
+}
+
+.left-section, .center-section, .right-section {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 50px 0;
+}
+
+.card {
+    background-color: #ffffff00;
+    color: #000;
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    height: 100%;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+.card:hover {
+    transform: scale(1.03);
+}
+
+/* Instagram Card */
+
+.instagram-video{
+    position: relative;
+    width: 62%;
+    height: 72%;
+    max-width: 165px;
+    max-height: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin: -18px auto 0px;
+    image-rendering: optimizeSpeed;
+}
+
+.instagram-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255,0,0,0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+    z-index: 2;
+    opacity: 0;
+}
+
+.card-left1:hover .overlay{
+    background-color: rgba(204, 28, 28, 40%);
+    opacity: 1;
+    cursor: pointer;
+}
+
+.instagram-logo {
+    width: 80px;
+    height: 80px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.card-left1:hover .instagram-logo  {
+    opacity: 1;
+}
+
+.insta-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+    will-change: transform;
+    transform: translateZ(0);
+}
+
+/* Google Maps Card */
+
+.card-left2 iframe {
+    border: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+}
+
+.card-left2:hover {
+    transform: none;
+}
+
+/* Card central */
+
+.center-section, .right-section, .left-section {
+    width: 100%;
+}
+
+.card-center1, .card-center2, .card-center3 {
+    width: 100%;
+    height: 100%;
+}
+
+.card-flip {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.card-center1:hover .card-flip, .card-center2:hover .card-flip, .card-center3:hover .card-flip {
+    transform: rotateX(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 5px;
+    user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -webkit-touch-callout: none;
+}
+
+.card-front {
+    background-color: #cc1c1c;
+}
+
+.card-back {
+    background-color: #fff;
+    transform: rotateX(180deg);
+    text-transform: uppercase;
+}
+
+.card-back-container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.card-front h2 {
+    color: #fff;
+    font-size: 6em;
+    text-align: center;
+    font-family: 'Sayonara-Bold', sans-serif ;
+    letter-spacing: 5px;
+}
+
+.card-back h3 {
+    text-align: center;
+    font-size: 3em;
+    color: #000;
+    margin: 0;
+    font-family:"Sayonara-Bold", sans-serif ;
+}
+
+.card-columns {
+    display: flex;
+    flex-direction: row;
+    align-items: top;
+    justify-content: center;
+}
+
+.card-column {
+    flex: 1;
+}
+
+.card-column img{
+    width: 30px;
+    height: 30px;
+    
+}
+
+.card-column-2 {
+    margin-top: 20px;
+}
+
+.card-column p {
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.small-title {
+    text-align: center;
+    font-size: 1.2em;
+    margin: -10px 0 0 0;
+}
+
+.card-buttons {
+    display: flex;
+    justify-content:space-around;
+}
+
+.card-buttons a{
+    padding: 10px 10px;
+    color: #000;
+    background-color: #fff;
+    border: 1px solid #cc1c1c;
+    border-radius : 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.card-buttons a:hover{
+    background-color: #cc1c1c;
+    color: #fff;
+}
+
+.button-phone:hover {
+    cursor:default;
+}
+
+.button-phone a:hover{
+    background-color: #fff;
+}
+
+
+.card-center2 .card-front{
+    background-color: #fff;
+}
+
+.card-center2 .card-front h2 {
+    color: #000;
+}
+
+/* CARD TOP RIGHT */
+
+.card-right1 {
+    width: 100%;
+    height: 65%;
+    position: relative;
+}
+
+.card6-face {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.6s ease;
+    border: 20px;
+    overflow: hidden;
+}
+
+.card6-front {
+    transform: rotateX(0deg);
+}
+
+.card6-back {
+    transform: rotateX(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-right1:hover .card6-front {
+    transform: rotateX(-180deg);
+}
+
+.card-right1:hover .card6-back {
+    transform: rotateX(0deg);
+}
+
+.card6-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card6-content {
+    position: absolute;
+    width: 100%;
+    height: 70%;
+    background-color: #cc1c1c;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.card6-title {
+    font-size: 1.5em;
+    font-family: 'Sayonara-Bold', sans-serif;
+    color: #fff;
+    margin: 0;
+}
+
+.card6-small-title {
+    font-size: 1.2em;
+    color: #fff;
+    margin: 0 0 10px 0;
+}
+
+.card6-text {
+    font-size: 0.9em;
+    color: #fff;
+    font-weight: 500;
+    padding: 0 10px;
+    letter-spacing: 1px;
+}
+
+/* CARD BOTTOM RIGHT */
+
+.card-right2 {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.card7-slider-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.fade {
+    opacity: 0;
+}
+
+.card-right2:hover {
+    filter: saturate(15%);
+    transform: none;
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .bento-container {
+        padding: 0 50px;
+        gap: 20px;
+        margin-top: -200px;
+    }
+
+    .left-section, .center-section, .right-section {
+        gap: 20px;
+    }
+    
+    .instagram-video {
+        height: auto;
+        width: 155px;
+    }
+
+    .card-back-container {
+        width: 96%;
+    }
+
+    .card-front h2 {
+        font-size: 4vw;
+    }
+    
+    .card-back h3 {
+        font-size: 1.5em;
+    }
+
+    .card-column img {
+        width: 20px;
+        height: 20px;
+        margin: -5px 0;
+    }
+
+    .card-column-2 {
+        margin-top: 0
+    }
+
+    .card-column p {
+        font-size: 0.6em;
+    }
+
+    .small-title {
+        margin-top: -8px;
+        font-size: 1.5vw;
+    }
+
+    .card-buttons a{
+        padding: 5px 5px;
+        font-size: 0.6em;
+        border-radius: 10px;
+    }
+
+    .card-buttons a img {
+        width: 2em;
+    }
+
+    .card6-title {
+        font-size: 1.1em;
+    }
+
+    .card6-small-title {
+        font-size: 0.8em;
+    }
+
+    .card6-text {
+        font-size: 0.6em;
+        margin: 8px 0;
+    }
+}
+
+/* RESPONSIVE ORDI MOYEN GRAND */
+
+@media (min-width: 1250px) and (max-width: 1440px) {
+    .card-front h2 {
+        font-size: 5vw;
+    }
+
+    .card-back h3 {
+        font-size: 2.5em;
+    }
+
+    .card-column img {
+        width: 30px;
+        height: 30px;
+        margin: -5px 0;
+    }
+
+    .card-column p {
+        font-size: 0.7em;
+    }
+
+    .card-buttons a{
+        padding: 10px 10px;
+        font-size: 0.6em;
+        border-radius: 10px;
+    }
+
+    .card-buttons a {
+        font-size: 0.9em;
+    }
+}
+
+/*RESPONSIVE ORDI GRAND */
+@media (min-width: 1441px) and (max-height: 900px) {
+    .instagram-video {
+        height: auto;
+        width: 155px;
+    }
+
+    .card-front h2 {
+        font-size: 4.5vw;
+    }
+
+    .card-back h3 {
+        font-size: 2.5em;
+    }
+
+    .card-column img {
+        width: 20px;
+        height: 20px;
+        margin: -5px 0;
+    }
+
+    .card-column p {
+        font-size: 0.7em;
+    }
+
+    .card-buttons a{
+        padding: 5px 5px;
+        font-size: 0.6em;
+        border-radius: 10px;
+    }
+
+    .card-buttons a {
+        font-size: 0.9em;
+    }
+
+    .card-column-2 {
+        margin-top: 0
+    }
+
+    .card6-title {
+        font-size: 1.5em;
+    }
+
+    .card6-small-title {
+        font-size: 1em;
+    }
+
+    .card6-text {
+        font-size: 0.7em;
+        margin: 8px 0;
+    }
+}
+
+@media (min-width: 1441px) and (min-height: 901px){
+
+    .card-front h2 {
+        font-size: 4.8vw;
+    }
+
+    .small-title {
+        font-size: 1.5vw;
+    }
+
+    .card6-title {
+        font-size: 1.5em;
+    }
+
+    .card6-text {
+        margin: 8px 0;
+    }
+}
+
+@media (min-height: 955px) {
+    .bento-container {
+        margin-top: -370px;
+    }
+
+    .instagram-video {
+        height: 31vh;
+        width: 10.5vw;
+        max-height: 500px;
+        max-width: 200px;
+    }
+}
+
+/* RESPONSIVE TABLET */ 
+
+@media (min-width: 521px) and (max-width: 1023px) {
+    .bento-container {
+        margin-top: -420px;
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        grid-template-areas: 
+            "center-section"
+            "right-section"
+            "left-section";
+        height: 200vh;
+    }
+
+    .card-left1 {
+        display: none;
+    }
+
+    .left-section {
+        width: 100%;
+        height: 100%;
+        grid-area: left-section;
+        margin-top: 50px;
+    }
+
+    .center-section {
+        height: 350%;
+        grid-area: center-section;
+
+    }
+
+    .right-section {
+        margin-top: 540px;
+        grid-area: right-section;
+        height: 55%;
+    }
+
+    .card-front h2 {
+        font-size: 13vw;
+    }
+
+    .card-back h3 {
+        font-size: 2em;
+    }
+
+    .card-column p {
+        font-size: 0.7em;
+    }
+
+    .card-column-2 {
+        margin-top: 0
+    }
+
+    .card-buttons a{
+        padding: 5px 5px;
+        font-size: 1em;
+        border-radius: 10px;
+    }
+
+    .card6-title {
+        font-size: 1.5em;
+    }
+
+    .card6-small-title {
+        font-size: 1em;
+    }
+
+    .card6-text {
+        font-size: 0.7em;
+        margin: 8px 0;
+    }
+
+}
+
+@media (max-width: 520px) {
+    .bento-container {
+        margin-top: -420px;
+        padding: 0 20px;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        grid-template-areas: 
+            "center-section"
+            "right-section"
+            "left-section";
+        height: 200vh;
+    }
+
+    .card-left1 {
+        display: none;
+    }
+
+    .left-section {
+        width: 100%;
+        height: 100%;
+        grid-area: left-section;
+        margin-top: -80px;
+    }
+
+    .card-left2 {
+        height: 300px;
+    }
+
+    .center-section {
+        height: 650px;
+        grid-area: center-section;
+
+    }
+
+    .right-section {
+        margin-top: -80px;
+        grid-area: right-section;
+        height: 500px;
+    }
+
+    .card-front h2 {
+        font-size: 13vw;
+    }
+
+    .card-column img {
+        margin-bottom: -12px;
+    }
+
+    .card-back h3 {
+        font-size: 2em;
+    }
+
+    .card-column p {
+        font-size: 0.6em;
+        margin-bottom: 15px;
+    }
+
+    .card-column-2 {
+        margin-top: 0
+    }
+
+    .card-buttons a{
+        padding: 5px 5px;
+        font-size: 1em;
+        border-radius: 10px;
+    }
+
+    .card6-title {
+        font-size: 1.5em;
+    }
+
+    .card6-small-title {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    .card6-text {
+        font-size: 0.6em;
+        margin: 5px 0;
+    }
+
+    .card6-content {
+        height: 62%;
+    }
+}
+
+@media (max-width: 520px) and (min-height: 840px) {
+    .bento-container {
+        margin-top: -500px;
+        height: 185vh;
+    }
+
+    .right-section {
+        margin-top: -80px;
+    }
+
+    .left-section {
+        margin-top: -80px;
+    }
+}
+
+/* RESPONSIVE GRAND ECRAN */
+
+@media (min-width: 2000px) {
+    .bento-container {
+        margin-top: -180px;
+    }   
+
+    .instagram-video video{
+        width: 200%;
+        height: 105%;
+    }
+
+    .card-front h2 {
+        font-size: 5.5vw;
+    }
+
+    .card-back h3 {
+        font-size: 4em;
+    }
+
+    .card-column img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .card-column p {
+        font-size: 1.3em;
+    }
+
+    .small-title {
+        font-size: 2em ;
+    }
+
+    .card-buttons a{
+        padding: 20px 20px;
+        font-size: 1.7em;
+        border: solid 3px #cc1c1c;
+        border-radius: 15px;
+    }
+
+    .button-phone {
+        width: 40px;
+        height: 40px;
+        justify-content: center;
+    }
+
+    .button-phone img  {
+        width: 150%;
+        height: 150%;
+    }
+
+    .card6-title {
+        font-size: 2.8em;
+    }
+
+    .card6-small-title {
+        font-size: 1.8em;
+    }
+
+    .card6-text {
+        font-size: 1.4em;
+        margin: 15px 0;
+    }
+
+}

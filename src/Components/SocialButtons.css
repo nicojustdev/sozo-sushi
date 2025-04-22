@@ -1,0 +1,141 @@
+/* SOCIAL BUTTONS */
+
+.social-buttons-container {
+    position: absolute;
+    top: 65%;
+    z-index: 5;
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 4s ease, transform 2s ease;
+}
+
+.social-buttons-container.visible-gauche {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.social-button {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    width: 140px;
+    height: 50px;
+    margin: 10px 0;
+    background-color: rgba(204,28,28,70%);
+    border-radius: 0 15px 15px 0;
+    transition: width 0.5s ease;
+    cursor: pointer;
+}
+
+.social-button img {
+    width: 40px;
+    height: 40px;
+    margin-right: 5px;
+}
+
+.social-button:hover {
+    width: 200px;
+    background-color: rgba(0, 0, 0, 30%);
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-height: 955px) {
+    .social-buttons-container {
+        top: 58%;
+    }
+}
+
+@media (min-width: 1024px) and (max-width: 1440px) {
+    .social-buttons-container {
+        top: 56%;
+    }
+
+    .social-button {
+        width: 90px;
+        height: 35px;
+    }
+
+    .social-button img {
+        width: 32px;
+        height: 32px;
+    }
+
+    .social-button:hover {
+        width: 150px;
+    }
+
+}
+
+@media (min-width: 1441px) and (max-height: 900px) {
+    .social-buttons-container {
+        top: 52%;
+    }
+}
+
+/* RESPONSIVE ORDI GRAND */
+
+@media (min-width: 2000px) {
+    .social-buttons-container {
+        top: 58%;
+    }
+
+    .social-button {
+        width: 180px;
+        height: 70px;
+        margin: 15px 0;
+    }
+
+    .social-button img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .social-button:hover {
+        width: 250px;
+    }
+}
+
+/* RESPONSIVE TABLET */
+
+@media (max-width: 1023px) {
+    .social-buttons-container {
+        top: 60%;
+        left: -1%;
+    }
+
+    .social-button {
+        width: 60px;
+        height: 50px;
+        margin: 10px 0;
+        border-radius: 0 15px 15px 0;
+    }
+
+    .social-button:hover {
+        width: 100px;
+    }
+}
+
+/* RESPONSIVE PHONE */
+
+@media (max-width: 520px) {
+    .social-buttons-container {
+        top: 49%;
+    }
+
+    .social-button {
+        width: 50px;
+        height: 40px;
+        margin: 10px 0;
+        border-radius: 0 12px 12px 0;
+    }
+
+    .social-button img {
+        width: 29px;
+        height: 29px;
+    }
+
+    .social-button:hover {
+        width: 80px;
+    }
+}

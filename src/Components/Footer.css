@@ -1,0 +1,34 @@
+/* FOOTER */
+
+.footer {
+    margin-top: 0;
+    height: 30px;
+    width: auto;
+    background-color: #cc1c1c;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer h4 {
+    margin: 0;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+/*RESPONSIVE ORDI MOYEN */
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .footer h4  {
+        font-size: 1.1em;
+    }
+}
+
+/*RESPONSIVE ORDI GRAND */
+
+@media (min-width: 1441px) {
+    .footer h4  {
+        font-size: 1.4em;
+    }
+}
