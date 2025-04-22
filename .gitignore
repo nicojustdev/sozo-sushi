@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 
 contact.js
+
+package.json
+package-lock.json
